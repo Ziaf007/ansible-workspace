@@ -1,0 +1,23 @@
+---
+- name: Query Default OOB EPG in Cisco ACI
+  hosts: aci
+  connection: local
+  gather_facts: no
+  collections:
+    - cisco.aci
+
+  tasks:
+    - name: Get information about the default OOB EPG
+      aci_node_mgmt_epg:
+        hostname: "{{ ansible_host }}"
+        username: "{{ ansible_user }}"
+        password: "{{ ansible_password }}"
+        validate_certs: false
+        epg: default
+        type: out_of_band
+        state: query
+      register: oob_epg_info
+
+    - name: Show OOB EPG details
+      debug:
+        var: oob_epg_info
