@@ -5,9 +5,15 @@ Container setup for quick deployment of an Ansible workspace with ACI Collection
 
 # Instructions to Deploy
 1. Make/Choose a directory in your device for ansible
-\n  mkdir ansible-workspace
+```
+  mkdir ansible-workspace
+```
 2. Download the Dockerfile in this repo to that directory.
 3. Build the Container from the same directory
-\n  podman build -t aci-ansible .
+```
+  podman build -t aci-ansible .
+```
 4. Run the container once it is built
-\n  podman run -it --rm -v "$PWD:/workspace" aci-ansible
+```
+  podman run -it --rm -v "$PWD:/workspace" aci-ansible
+```
