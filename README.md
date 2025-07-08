@@ -2,6 +2,7 @@
 Container setup for quick deployment of an Ansible workspace with ACI Collection.
 
 # NOTE: Please install podman for your device first. Docker needs licensing, but Podman is Open-Source.
+https://podman.io/docs/installation
 
 # Instructions to Deploy
 1. Make/Choose a directory in your device for ansible
